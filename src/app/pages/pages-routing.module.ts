@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { DasboardComponent } from './dasboard/dasboard.component';
 import { GraphicOneComponent } from './graphic-one/graphic-one.component';
 import { PagesComponent } from './pages.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'graphic',
         component: GraphicOneComponent,
+      },
+      {
+        path: 'account-settings',
+        component: AccountSettingsComponent,
       },
     ],
   },

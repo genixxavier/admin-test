@@ -1,1 +1,51 @@
-<p>progress works!</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Default Progress bars</h4>
+        <div class="progress m-t-30">
+          <div
+            class="progress-bar active progress-bar-striped bg-primary"
+            style="height: 6px"
+            [style.width]="getProgressOne"
+            role="progressbar"
+          >
+            <span class="sr-only">60% Complete</span>
+          </div>
+        </div>
+        <hr />
+        <div class="progress m-t-30">
+          <div
+            class="progress-bar active progress-bar-striped bg-info"
+            style="height: 6px"
+            [style.width]="getProgresstwo"
+            role="progressbar"
+          >
+            <span class="sr-only">60% Complete</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <app-imcrement
+          (changeProgress)="progressOne = $event"
+          [progress]="progressOne"
+        ></app-imcrement>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <app-imcrement
+          [btnClass]="'btn-info'"
+          (changeProgress)="progressTwo = $event"
+          [progress]="progressTwo"
+        ></app-imcrement>
+      </div>
+    </div>
+  </div>
+</div>
